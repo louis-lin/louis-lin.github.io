@@ -6,7 +6,7 @@ subtitle: PhD Candidate, Structural Engineering, UC San Diego
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: # TODO: add a real headshot to assets/img/ and set the filename here
   image_circular: false
   more_info: >
     <p>Powell Structural Engineering Labs</p>
