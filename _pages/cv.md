@@ -2,7 +2,8 @@
 layout: page
 permalink: /cv/
 title: CV
-nav: false # not in the top nav for now -- reachable directly, and linkable from about
+nav: true
+nav_order: 4
 description: Updated periodically. Plain markdown, edited directly in this file.
 toc:
   sidebar: left
@@ -11,6 +12,8 @@ toc:
 ## Education
 
 **Ph.D. in Structural Engineering**, University of California, San Diego - Expected 12/2026
+
+
 Large-scale testing, finite element modeling and correlation, nonlinear dynamics of structural systems, structural vibrations, modal analysis.
 
 **M.S. in Structural Engineering**, University of California, San Diego - 10/2020-6/2021
