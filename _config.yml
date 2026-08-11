@@ -340,8 +340,14 @@ scholar:
   details_link: Details
 
   query: "@*"
-  group_by: year
-  group_order: descending
+  group_by: type
+  group_order: ascending
+  type_order: [article, inproceedings, techreport, misc]
+  type_names:
+    article: Journal
+    inproceedings: Conferences
+    techreport: Reports
+    misc: Data
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid

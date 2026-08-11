@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
 subtitle: PhD Candidate, Structural Engineering, UC San Diego
 
@@ -9,7 +9,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>Powell Structural Engineering Labs</p>
+    <p>Structural and Material Engineering Building</p>
+    <p>Room 441E</p>
     <p>La Jolla, CA</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"

@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 4
-description: Updated periodically. Plain markdown, edited directly in this file.
+description:
 toc:
   sidebar: left
 ---
@@ -13,13 +13,14 @@ toc:
 
 **Ph.D. in Structural Engineering**, University of California, San Diego - Expected 12/2026
 
-
 Large-scale testing, finite element modeling and correlation, nonlinear dynamics of structural systems, structural vibrations, modal analysis.
 
 **M.S. in Structural Engineering**, University of California, San Diego - 10/2020-6/2021
+
 Nonlinear structural analysis, advanced seismic design, base isolation and supplemental damping, advanced steel/concrete/masonry design, structural system testing and model correlation.
 
 **B.S. in Civil Engineering**, Lehigh University - 9/2016-5/2020
+
 Blast-resistant design and analysis, structural fire engineering, building systems.
 
 ## Technical Experience
@@ -48,13 +49,18 @@ Blast-resistant design and analysis, structural fire engineering, building syste
 
 ## Teaching Experience
 
-**Teaching Assistant**, SE 101B Mechanics II: Dynamics - 1-3/24, 1-3/25, 3-6/25, 1/26-Present
+### Teaching Assistant
+
+SE 143B: Aerospace Capstone
+- Testing and model validation of composite wing.
+
+SE 101B Mechanics II: Dynamics - 1-3/24, 1-3/25, 3-6/25, 1/26-3/26
 - Delivered supplemental instruction to over 150 students: office hours, problem-solving sessions, study materials, exam proctoring, grade maintenance.
 
-**Teaching Assistant**, SE 9 Algorithms and Programming for SE - 1-6/2023
+SE 9 Algorithms and Programming for SE - 1-6/2023
 - Prepared and held weekly labs for 3 sections of 120 students on applying MATLAB to structural engineering.
 
-**Teaching Assistant**, SE 131B Computing Projects in SE - 9-12/2022
+SE 131B Computing Projects in SE - 9-12/2022
 - Reviewed and commented on 150+ students' FEA reports covering beams and shells in modal analysis, model reduction, composite materials, buckling analysis, and topology optimization.
 
 ## Research Experience
