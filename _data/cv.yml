@@ -1,0 +1,10 @@
+# The LaTeX-sourced PDF (assets/pdf/cv.pdf, set via _pages/cv.md's cv_pdf field) is the
+# single source of truth for the CV -- see EDITORIAL.md. This file is intentionally left
+# without a `sections:` block so the page shows only the PDF download button, not a second,
+# divergent copy of the CV content.
+cv:
+  name: Louis Lin
+  label: PhD Candidate, Structural Engineering
+  email: # TODO: your academic email
+  location: La Jolla, CA
+  image: ""
