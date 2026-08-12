@@ -3,6 +3,6 @@
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 # TODO: add email, scholar_userid, orcid_id once you have real values --
 # leaving a key present with a blank value crashes this plugin, so omit until ready.
-cv_pdf: /assets/pdf/cv.pdf
+# cv_pdf omitted -- CV is the plain-markdown /cv/ page now, no PDF artifact.
 rss_icon: true # comment this line to hide the RSS icon
 github_username: louis-lin
