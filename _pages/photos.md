@@ -14,27 +14,33 @@ description: Lab and field work, plus the occasional non-research photo.
 
 ## Research
 
-Drop images into `assets/img/experimental/` -- they show up here automatically, no template edits needed.
-
 <div class="photo-grid">
 {% assign research_photos = site.static_files | where_exp: "f", "f.path contains 'assets/img/experimental/'" %}
 {% for photo in research_photos %}
-  {% unless photo.name == '.gitkeep' %}
+  {% assign ext = photo.extname | downcase %}
+  {% if photo.name == '.gitkeep' or photo.name == '.DS_Store' or ext == '.webp' %}
+    {% continue %}
+  {% elsif ext == '.mp4' or ext == '.mov' or ext == '.webm' %}
+  <video controls muted playsinline preload="metadata"><source src="{{ photo.path | relative_url }}"></video>
+  {% else %}
   <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
-  {% endunless %}
+  {% endif %}
 {% endfor %}
 </div>
 
 ## Personal
 
-Drop images into `assets/img/personal/`.
-
 <div class="photo-grid">
 {% assign personal_photos = site.static_files | where_exp: "f", "f.path contains 'assets/img/personal/'" %}
 {% for photo in personal_photos %}
-  {% unless photo.name == '.gitkeep' %}
+  {% assign ext = photo.extname | downcase %}
+  {% if photo.name == '.gitkeep' or photo.name == '.DS_Store' or ext == '.webp' %}
+    {% continue %}
+  {% elsif ext == '.mp4' or ext == '.mov' or ext == '.webm' %}
+  <video controls muted playsinline preload="metadata"><source src="{{ photo.path | relative_url }}"></video>
+  {% else %}
   <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
-  {% endunless %}
+  {% endif %}
 {% endfor %}
 </div>
 
@@ -45,7 +51,8 @@ Drop images into `assets/img/personal/`.
   gap: 1rem;
   margin: 1rem 0 2.5rem;
 }
-.photo-grid img {
+.photo-grid img,
+.photo-grid video {
   width: 100%;
   height: 220px;
   object-fit: cover;
