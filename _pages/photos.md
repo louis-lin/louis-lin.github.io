@@ -14,51 +14,15 @@ description: Lab and field work, plus the occasional non-research photo.
 
 ## Research
 
-<div class="photo-grid">
-{% assign research_photos = site.static_files | where_exp: "f", "f.path contains 'assets/img/experimental/'" %}
-{% for photo in research_photos %}
-  {% assign ext = photo.extname | downcase %}
-  {% if photo.name == '.gitkeep' or photo.name == '.DS_Store' or ext == '.webp' %}
-    {% continue %}
-  {% elsif ext == '.mp4' or ext == '.mov' or ext == '.webm' %}
-  <video controls muted playsinline preload="metadata"><source src="{{ photo.path | relative_url }}"></video>
-  {% else %}
-  <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
-  {% endif %}
-{% endfor %}
-</div>
+{% include photo_grid.liquid dir="assets/img/experimental/" %}
 
 ## Personal
 
-<div class="photo-grid">
-{% assign personal_photos = site.static_files | where_exp: "f", "f.path contains 'assets/img/personal/'" %}
-{% for photo in personal_photos %}
-  {% assign ext = photo.extname | downcase %}
-  {% if photo.name == '.gitkeep' or photo.name == '.DS_Store' or ext == '.webp' %}
-    {% continue %}
-  {% elsif ext == '.mp4' or ext == '.mov' or ext == '.webm' %}
-  <video controls muted playsinline preload="metadata"><source src="{{ photo.path | relative_url }}"></video>
-  {% else %}
-  <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
-  {% endif %}
-{% endfor %}
-</div>
+{% include photo_grid.liquid dir="assets/img/personal/" %}
 
 ## Travel
 
-<div class="photo-grid">
-{% assign travel_photos = site.static_files | where_exp: "f", "f.path contains 'assets/img/travel/'" %}
-{% for photo in travel_photos %}
-  {% assign ext = photo.extname | downcase %}
-  {% if photo.name == '.gitkeep' or photo.name == '.DS_Store' or ext == '.webp' %}
-    {% continue %}
-  {% elsif ext == '.mp4' or ext == '.mov' or ext == '.webm' %}
-  <video controls muted playsinline preload="metadata"><source src="{{ photo.path | relative_url }}"></video>
-  {% else %}
-  <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
-  {% endif %}
-{% endfor %}
-</div>
+{% include photo_grid.liquid dir="assets/img/travel/" %}
 
 <style>
 .photo-grid {
