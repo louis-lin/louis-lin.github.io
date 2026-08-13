@@ -44,6 +44,22 @@ description: Lab and field work, plus the occasional non-research photo.
 {% endfor %}
 </div>
 
+## Travel
+
+<div class="photo-grid">
+{% assign travel_photos = site.static_files | where_exp: "f", "f.path contains 'assets/img/travel/'" %}
+{% for photo in travel_photos %}
+  {% assign ext = photo.extname | downcase %}
+  {% if photo.name == '.gitkeep' or photo.name == '.DS_Store' or ext == '.webp' %}
+    {% continue %}
+  {% elsif ext == '.mp4' or ext == '.mov' or ext == '.webm' %}
+  <video controls muted playsinline preload="metadata"><source src="{{ photo.path | relative_url }}"></video>
+  {% else %}
+  <img src="{{ photo.path | relative_url }}" alt="" loading="lazy">
+  {% endif %}
+{% endfor %}
+</div>
+
 <style>
 .photo-grid {
   display: grid;
@@ -51,12 +67,18 @@ description: Lab and field work, plus the occasional non-research photo.
   gap: 1rem;
   margin: 1rem 0 2.5rem;
 }
-.photo-grid img,
-.photo-grid video {
+.photo-grid img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 8px;
   cursor: zoom-in;
+}
+.photo-grid video {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #000;
+  border-radius: 8px;
 }
 </style>
