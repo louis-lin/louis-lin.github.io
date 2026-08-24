@@ -7,9 +7,7 @@ first_name: Louis
 last_name: Lin
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Research on structural engineering, UC San Diego.
-footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+footer_text: "" # "Powered by Jekyll/al-folio, Hosted by GitHub Pages" credit line removed -- not required by al-folio's MIT license, just a default. "(c) Copyright {year} Louis Lin." still shows (hardcoded by the theme's footer.liquid, not from this field).
 keywords: structural engineering, buckling, steel, UC San Diego
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: # TODO: real favicon once a domain exists; leave blank for the theme default
