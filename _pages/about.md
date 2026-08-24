@@ -33,13 +33,13 @@ I work on the seismic performance of steel structural systems and the nonstructu
 
 ## Research
 
-<div class="row row-cols-1 row-cols-md-3">
+<div class="row row-cols-1 row-cols-md-3 home-preview-cards">
   <div class="col">
     <a href="{{ '/research/#bolted-moment-connections-can-be-prequalified-for-both-new-construction-and-retrofit' | relative_url }}">
       <div class="card h-100 hoverable">
         <div class="card-body">
-          <h2 class="card-title">Bolted moment connections can be prequalified for both new construction and retrofit</h2>
-          <p class="card-text">19 specimens across four full-scale subassemblies, tested under the AISC cyclic loading protocol.</p>
+          <h2 class="card-title">Bolted moment connections</h2>
+          <p class="card-text">Can be prequalified for both new construction and retrofit -- 19 specimens across four full-scale subassemblies, tested under the AISC cyclic loading protocol.</p>
         </div>
       </div>
     </a>
@@ -48,8 +48,8 @@ I work on the seismic performance of steel structural systems and the nonstructu
     <a href="{{ '/research/#nonstructural-equipment-often-governs-seismic-risk-independent-of-the-buildings-global-response' | relative_url }}">
       <div class="card h-100 hoverable">
         <div class="card-body">
-          <h2 class="card-title">Nonstructural equipment often governs seismic risk independent of the building's global response</h2>
-          <p class="card-text">FEM correlation and NLTHA across isolation and damping designs, for nuclear plant and hospital equipment.</p>
+          <h2 class="card-title">Nonstructural equipment risk</h2>
+          <p class="card-text">Often governs independent of the building's global response -- FEM correlation and NLTHA across isolation and damping designs, for nuclear plant and hospital equipment.</p>
         </div>
       </div>
     </a>
@@ -58,8 +58,8 @@ I work on the seismic performance of steel structural systems and the nonstructu
     <a href="{{ '/research/#full-scale-system-identification-catches-as-built-behavior-a-design-stage-model-cant' | relative_url }}">
       <div class="card h-100 hoverable">
         <div class="card-body">
-          <h2 class="card-title">Full-scale system identification catches as-built behavior a design-stage model can't</h2>
-          <p class="card-text">Impact and white-noise testing on a three-story steel testbed building at UCSD's outdoor shake table.</p>
+          <h2 class="card-title">Full-scale system identification</h2>
+          <p class="card-text">Catches as-built behavior a design-stage model can't -- impact and white-noise testing on a three-story steel testbed building at UCSD's outdoor shake table.</p>
         </div>
       </div>
     </a>
@@ -68,13 +68,13 @@ I work on the seismic performance of steel structural systems and the nonstructu
 
 ## Outreach
 
-<div class="row row-cols-1 row-cols-md-3">
+<div class="row row-cols-1 row-cols-md-3 home-preview-cards">
   <div class="col">
     <a href="{{ '/outreach/#shake-table-outreach' | relative_url }}">
       <div class="card h-100 hoverable">
         <div class="card-body">
-          <h2 class="card-title">Running the department's shake-table outreach</h2>
-          <p class="card-text">Shake-table visits, resume workshops, and mentoring, as EERI UCSD chapter president.</p>
+          <h2 class="card-title">Shake-table outreach</h2>
+          <p class="card-text">Running the department's outreach program -- visits, resume workshops, and mentoring, as EERI UCSD chapter president.</p>
         </div>
       </div>
     </a>
@@ -83,8 +83,8 @@ I work on the seismic performance of steel structural systems and the nonstructu
     <a href="{{ '/outreach/#professional-engagement' | relative_url }}">
       <div class="card h-100 hoverable">
         <div class="card-body">
-          <h2 class="card-title">Leading a summer research program for undergraduates</h2>
-          <p class="card-text">Graduate lead for the California Space Grant Consortium's aerospace program.</p>
+          <h2 class="card-title">CASGC graduate lead</h2>
+          <p class="card-text">Leading a summer research program for undergraduates in the California Space Grant Consortium's aerospace program.</p>
         </div>
       </div>
     </a>
@@ -93,13 +93,24 @@ I work on the seismic performance of steel structural systems and the nonstructu
     <a href="{{ '/outreach/#teaching' | relative_url }}">
       <div class="card h-100 hoverable">
         <div class="card-body">
-          <h2 class="card-title">TA for four courses across the SE curriculum</h2>
-          <p class="card-text">From introductory programming to capstone design, 100+ students per offering.</p>
+          <h2 class="card-title">Teaching</h2>
+          <p class="card-text">TA for four courses across the SE curriculum, from introductory programming to capstone design, 100+ students per offering.</p>
         </div>
       </div>
     </a>
   </div>
 </div>
+
+<style>
+.home-preview-cards .card-title {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+.home-preview-cards .card-text {
+  font-size: 0.92rem;
+}
+</style>
 
 ## Latest publication
 
