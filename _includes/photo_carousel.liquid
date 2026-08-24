@@ -1,0 +1,27 @@
+<swiper-container class="home-photo-swiper" loop="true" pagination="true" navigation="true" slides-per-view="1.15" space-between="16" autoplay-delay="3500">
+{% assign carousel_dirs = "assets/img/experimental/,assets/img/personal/,assets/img/travel/" | split: "," %}
+{% for dir in carousel_dirs %}
+  {% assign files = site.static_files | where_exp: "f", "f.path contains dir" %}
+  {% for photo in files %}
+    {% assign ext = photo.extname | downcase %}
+    {% if photo.name == '.gitkeep' or photo.name == '.DS_Store' or ext == '.webp' or ext == '.mov' or ext == '.mp4' or ext == '.webm' %}
+      {% continue %}
+    {% endif %}
+    {% assign base = photo.path | remove: photo.extname %}
+  <swiper-slide><img src="{{ base | append: '-800.webp' | relative_url }}" alt="" loading="lazy"></swiper-slide>
+  {% endfor %}
+{% endfor %}
+</swiper-container>
+
+<style>
+.home-photo-swiper {
+  margin: 1rem 0 2.5rem;
+  --swiper-navigation-size: 22px;
+}
+.home-photo-swiper swiper-slide img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+</style>
