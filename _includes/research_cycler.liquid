@@ -10,4 +10,6 @@
 {% else %}
 <p class="cycler-empty">Slides coming soon.</p>
 {% endif %}
+{% unless include.hide_link %}
 <p class="cycler-link"><a href="{{ '/research/' | relative_url }}">View full research page -&gt;</a></p>
+{% endunless %}

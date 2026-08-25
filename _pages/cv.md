@@ -2,8 +2,7 @@
 layout: page
 permalink: /cv/
 title: CV
-nav: true
-nav_order: 4
+nav: false # dropped from top nav -- home page now links directly to the CV PDF instead
 description:
 toc:
   sidebar: left

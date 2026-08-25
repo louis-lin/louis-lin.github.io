@@ -14,4 +14,6 @@
 {% else %}
 <p class="cycler-empty">Photos coming soon.</p>
 {% endif %}
+{% unless include.hide_link %}
 <p class="cycler-link"><a href="{{ '/outreach/' | relative_url }}">View full outreach page -&gt;</a></p>
+{% endunless %}

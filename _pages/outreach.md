@@ -4,7 +4,7 @@ title: Outreach
 permalink: /outreach/
 nav: true
 nav_order: 6
-description: Service, mentorship, and teaching alongside the research.
+description: Service and mentorship alongside the research.
 ---
 
 ## Shake table outreach
@@ -27,17 +27,6 @@ stands.
 
 **SE Pathways Cohort** -- <!-- TODO: add dates and a short description here -->
 
-## Teaching
+Teaching is covered separately on the [Education](/education/) page.
 
-TA'd four courses across the structural engineering curriculum, from introductory programming
-to capstone design:
-
-- **SE 143B: Aerospace Capstone** -- composite wing testing and model validation.
-- **SE 101B: Mechanics II (Dynamics)**, recurring 2024-2026 -- supplemental instruction for
-  150+ students per offering.
-- **SE 9: Algorithms and Programming for SE** -- weekly MATLAB labs, 3 sections of 120
-  students.
-- **SE 131B: Computing Projects in SE** -- reviewed 150+ students' FEA reports on modal
-  analysis, model reduction, composite materials, buckling, and topology optimization.
-
-Full dates and details are on the [CV](/cv/).
+{% include outreach_cycler.liquid hide_link=true %}

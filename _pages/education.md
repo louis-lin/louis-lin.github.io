@@ -4,29 +4,30 @@ title: Education
 permalink: /education/
 nav: true
 nav_order: 7
-description: Degrees and the coursework that feeds directly into the research.
+description: Teaching, not degrees -- courses TA'd across the SE curriculum.
 ---
 
-## Doctor of Philosophy, Structural Engineering
+{% include outreach_cycler.liquid %}
 
-University of California, San Diego -- Expected December 2026.
+## SE 101B: Mechanics II (Dynamics)
 
-Coursework and research centered on large-scale experimental testing, finite element modeling
-and correlation, nonlinear dynamics of structural systems, structural vibrations, and modal
-analysis -- the same toolkit used throughout the [Research](/research/) page.
+Recurring, 1-3/2024, 1-3/2025, 3-6/2025, 1-3/2026. Supplemental instruction for 150+ students
+per offering: office hours, problem-solving sessions, study materials, exam proctoring, and
+grade maintenance.
 
-## Master of Science, Structural Engineering
+## SE 9: Algorithms and Programming for Structural Engineers
 
-University of California, San Diego -- October 2020 to June 2021.
+1-6/2023. Weekly MATLAB labs for 3 sections of 120 students, applying programming directly to
+structural engineering problems.
 
-Covered nonlinear structural analysis, advanced seismic design, base isolation and
-supplemental damping, and advanced steel, concrete, and masonry design, alongside structural
-system testing and model correlation.
+## SE 131B: Computing Projects in Structural Engineering
 
-## Bachelor of Science, Civil Engineering
+9-12/2022. Reviewed and commented on 150+ students' FEA reports, covering beams and shells in
+modal analysis, model reduction, composite materials, buckling analysis, and topology
+optimization.
 
-Lehigh University -- September 2016 to May 2020.
+## SE 143B: Aerospace Capstone
 
-Included blast-resistant design and analysis, structural fire engineering, and building
-systems. Founded and led the Lehigh University Seismic Design Club during this time (see
-[Outreach](/outreach/)).
+Testing and model validation of a composite wing.
+
+Degree history is on the [CV](/assets/pdf/cv.pdf).

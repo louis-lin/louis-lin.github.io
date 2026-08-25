@@ -31,6 +31,8 @@ latest_posts:
 
 I work on the seismic performance of steel structural systems and the nonstructural components and equipment they support. My approach pairs full-scale physical testing -- shake-table studies, cyclic beam-column subassembly tests, roving-hammer modal surveys -- with finite element modeling in ABAQUS and OpenSees, correlating the two to check analytical predictions against measured behavior. Current work includes prequalifying DuraFuse bolted moment connections for new special moment frame (SMF) construction and retrofit under the AISC cyclic loading protocol, and characterizing the seismic risk to safety-related equipment in nuclear power plants and hospitals. The common thread is closing the gap between how a structure or its contents are assumed to behave in design and how they actually behave under real loading.
 
+<p><a class="cv-download-link" href="{{ '/assets/pdf/cv.pdf' | relative_url }}">Current CV</a></p>
+
 ## Research
 
 {% include research_cycler.liquid %}
@@ -50,34 +52,42 @@ I work on the seismic performance of steel structural systems and the nonstructu
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const bio = document.querySelector('article > .clearfix > p:first-of-type');
-  const profile = document.querySelector('article > .profile');
-  if (!bio || !profile) return;
-  const matchHeight = () => { profile.style.height = bio.offsetHeight + 'px'; };
-  matchHeight();
-  window.addEventListener('resize', matchHeight);
+  const figure = document.querySelector('article > .profile figure');
+  if (!bio || !figure) return;
+  const matchSize = () => {
+    const side = bio.offsetHeight + 'px';
+    figure.style.height = side;
+    figure.style.width = side;
+  };
+  matchSize();
+  window.addEventListener('resize', matchSize);
 });
 </script>
 
 <style>
-article > .profile {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
 article > .profile figure {
-  flex: 1;
-  min-height: 0;
-  margin: 0;
+  margin: 0 0 0.75rem auto; /* square box, right-aligned so it lines up with .profile's float */
+  overflow: hidden;
 }
 article > .profile figure picture,
 article > .profile figure img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: center 15%; /* bias crop toward the top so it doesn't cut into the head */
+  object-fit: contain; /* scale down to fit the square, don't crop */
 }
-article > .profile .more-info {
-  flex-shrink: 0;
+
+.cv-download-link {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--global-theme-color);
+  border-radius: 6px;
+  color: var(--global-theme-color) !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+.cv-download-link:hover {
+  background: var(--global-theme-color);
+  color: var(--global-hover-text-color, #fff) !important;
 }
 
 .home-cycler {

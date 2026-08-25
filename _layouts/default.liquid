@@ -1,0 +1,106 @@
+<!doctype html>
+{%- comment -%}
+  NOTE: this file is a copy of al_folio_core's own _layouts/default.liquid, overridden
+  locally only to inject a <style> accent-color override right after `head.liquid` (see
+  below) -- overriding the theme's Sass `$purple-color` variable directly isn't reliable
+  here since `_themes.scss`'s `@use "variables"` resolves relative to its own directory
+  inside the gem, not the site's `_sass/`. If al_folio_core is ever upgraded, diff this
+  file against the new gem version and re-apply just the <style> block.
+
+  al_rtl owns the language and direction attributes when it is installed, because
+  `dir` has to sit on <html> for the browser's bidi handling, CSS logical
+  properties and Tailwind's rtl: variant to apply to the whole document.
+
+  Captured into a variable rather than wrapping the <html> tag in a conditional:
+  a conditional there stops the tag being a single static element, and Prettier
+  then re-indents the entire document body. The guard keeps this parse-safe --
+  without the plugin the tag does not exist and Liquid fails on every page.
+{%- endcomment -%}
+{%- capture html_attributes -%}
+  {%- if site.plugins contains 'al_rtl' -%}
+    {%- include plugins/al_rtl_html_attrs.liquid -%}
+  {%- else -%}
+    lang="{{ site.lang }}"
+  {%- endif -%}
+{%- endcapture -%}
+<html {{ html_attributes }}>
+  <!-- Head -->
+  <head>
+    {% if page.redirect %}
+      {% if page.redirect == true %}
+        {% assign redirect = site.baseurl | append: '/' %}
+      {% elsif page.redirect contains '://' %}
+        {% assign redirect = page.redirect %}
+      {% else %}
+        {% assign redirect = page.redirect | relative_url %}
+      {% endif %}
+      <meta http-equiv="refresh" content="3; url={{ redirect }}">
+    {% endif %}
+    {% include head.liquid %}
+    <!-- Local override -- see NOTE at top of this file (copied from the theme gem's
+         _layouts/default.liquid) for why this exists instead of a cleaner hook. -->
+    <style>
+      :root {
+        --global-theme-color: #1d5c8a;
+        --global-hover-color: #1d5c8a;
+      }
+      html[data-theme="dark"] {
+        --global-theme-color: #5fa8d3;
+        --global-hover-color: #5fa8d3;
+      }
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!-- Header -->
+    {% include header.liquid %}
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      {% if page.toc and page.toc.sidebar %}
+        {% assign toc_collapse = page.toc.collapse | default: 'expanded' %}
+        {% assign toc_collapse_depth = page.toc.collapse_depth | default: '' %}
+        {% if page.toc.sidebar == 'right' %}
+          <div class="row">
+            <!-- main content area -->
+            <div class="col-sm-9">{{ content }}</div>
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav
+                id="toc-sidebar"
+                class="sticky-top toc toc-sidebar"
+                aria-label="Table of contents"
+                data-toc-collapse="{{ toc_collapse }}"
+                data-toc-collapse-depth="{{ toc_collapse_depth }}"
+              ></nav>
+            </div>
+          </div>
+        {% else %}
+          <div class="row">
+            <!-- sidebar, which will move to the top on a small screen -->
+            <div class="col-sm-3">
+              <nav
+                id="toc-sidebar"
+                class="sticky-top toc toc-sidebar"
+                aria-label="Table of contents"
+                data-toc-collapse="{{ toc_collapse }}"
+                data-toc-collapse-depth="{{ toc_collapse_depth }}"
+              ></nav>
+            </div>
+            <!-- main content area -->
+            <div class="col-sm-9">{{ content }}</div>
+          </div>
+        {% endif %}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </div>
+
+    <!-- Footer -->
+    {% include footer.liquid %}
+
+    <!-- JavaScripts -->
+    {% include scripts.liquid %}
+  </body>
+</html>

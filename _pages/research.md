@@ -7,6 +7,8 @@ nav_order: 2
 description: Organized by question, not by chapter.
 ---
 
+{% include research_cycler.liquid hide_link=true %}
+
 ## Bolted moment connections can be prequalified for both new construction and retrofit
 
 DuraFuse moment connections are a bolted alternative to welded or proprietary cast SMF
