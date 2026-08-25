@@ -5,6 +5,8 @@ permalink: /outreach/
 nav: true
 nav_order: 6
 description: Service and mentorship alongside the research.
+images:
+  slider: true # loads Swiper for the outreach cycler below
 ---
 
 ## Shake table outreach
@@ -30,3 +32,4 @@ stands.
 Teaching is covered separately on the [Education](/education/) page.
 
 {% include outreach_cycler.liquid hide_link=true %}
+{% include cycler_styles.liquid %}

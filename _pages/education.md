@@ -5,9 +5,12 @@ permalink: /education/
 nav: true
 nav_order: 7
 description: Teaching, not degrees -- courses TA'd across the SE curriculum.
+images:
+  slider: true # loads Swiper for the photo cycler below
 ---
 
 {% include outreach_cycler.liquid %}
+{% include cycler_styles.liquid %}
 
 ## SE 101B: Mechanics II (Dynamics)
 

@@ -5,9 +5,12 @@ permalink: /research/
 nav: true
 nav_order: 2
 description: Organized by question, not by chapter.
+images:
+  slider: true # loads Swiper for the research cycler below
 ---
 
 {% include research_cycler.liquid hide_link=true %}
+{% include cycler_styles.liquid %}
 
 ## Bolted moment connections can be prequalified for both new construction and retrofit
 
