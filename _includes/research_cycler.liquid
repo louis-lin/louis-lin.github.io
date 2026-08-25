@@ -1,0 +1,13 @@
+{% assign files = site.static_files | where_exp: "f", "f.path contains 'assets/img/research-slides/' and f.extname != '.webp' and f.name != '.gitkeep' and f.name != '.DS_Store'" %}
+{% assign files = files | sort: "path" %}
+{% if files.size > 0 %}
+<swiper-container class="home-cycler" loop="true" pagination="true" navigation="true" slides-per-view="1" autoplay-delay="4500">
+{% for photo in files %}
+  {% assign base = photo.path | remove: photo.extname %}
+<swiper-slide><img src="{{ base | append: '-1400.webp' | relative_url }}" alt="" loading="lazy"></swiper-slide>
+{% endfor %}
+</swiper-container>
+{% else %}
+<p class="cycler-empty">Slides coming soon.</p>
+{% endif %}
+<p class="cycler-link"><a href="{{ '/research/' | relative_url }}">View full research page -&gt;</a></p>

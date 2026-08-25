@@ -1,0 +1,5 @@
+# Maps a photo's filename (without extension) in assets/img/outreach/ to its caption
+# on the home page cycler. A photo with no matching key here just shows without a caption.
+#
+# Example:
+# shake-table-visit: Shake-table demo for prospective students, spring 2025.

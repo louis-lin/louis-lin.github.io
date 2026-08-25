@@ -33,84 +33,11 @@ I work on the seismic performance of steel structural systems and the nonstructu
 
 ## Research
 
-<div class="row row-cols-1 row-cols-md-3 home-preview-cards">
-  <div class="col">
-    <a href="{{ '/research/#bolted-moment-connections-can-be-prequalified-for-both-new-construction-and-retrofit' | relative_url }}">
-      <div class="card h-100 hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Bolted moment connections</h2>
-          <p class="card-text">Can be prequalified for both new construction and retrofit -- 19 specimens across four full-scale subassemblies, tested under the AISC cyclic loading protocol.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col">
-    <a href="{{ '/research/#nonstructural-equipment-often-governs-seismic-risk-independent-of-the-buildings-global-response' | relative_url }}">
-      <div class="card h-100 hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Nonstructural equipment risk</h2>
-          <p class="card-text">Often governs independent of the building's global response -- FEM correlation and NLTHA across isolation and damping designs, for nuclear plant and hospital equipment.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col">
-    <a href="{{ '/research/#full-scale-system-identification-catches-as-built-behavior-a-design-stage-model-cant' | relative_url }}">
-      <div class="card h-100 hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Full-scale system identification</h2>
-          <p class="card-text">Catches as-built behavior a design-stage model can't -- impact and white-noise testing on a three-story steel testbed building at UCSD's outdoor shake table.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
+{% include research_cycler.liquid %}
 
 ## Outreach
 
-<div class="row row-cols-1 row-cols-md-3 home-preview-cards">
-  <div class="col">
-    <a href="{{ '/outreach/#shake-table-outreach' | relative_url }}">
-      <div class="card h-100 hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Shake-table outreach</h2>
-          <p class="card-text">Running the department's outreach program -- visits, resume workshops, and mentoring, as EERI UCSD chapter president.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col">
-    <a href="{{ '/outreach/#professional-engagement' | relative_url }}">
-      <div class="card h-100 hoverable">
-        <div class="card-body">
-          <h2 class="card-title">CASGC graduate lead</h2>
-          <p class="card-text">Leading a summer research program for undergraduates in the California Space Grant Consortium's aerospace program.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="col">
-    <a href="{{ '/outreach/#teaching' | relative_url }}">
-      <div class="card h-100 hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Teaching</h2>
-          <p class="card-text">TA for four courses across the SE curriculum, from introductory programming to capstone design, 100+ students per offering.</p>
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-
-<style>
-.home-preview-cards .card-title {
-  font-size: 1.15rem;
-  line-height: 1.35;
-  margin-bottom: 0.5rem;
-}
-.home-preview-cards .card-text {
-  font-size: 0.92rem;
-}
-</style>
+{% include outreach_cycler.liquid %}
 
 ## Latest publication
 
@@ -119,3 +46,76 @@ I work on the seismic performance of steel structural systems and the nonstructu
 ## Photos
 
 {% include photo_carousel.liquid %}
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const bio = document.querySelector('article > .clearfix > p:first-of-type');
+  const profile = document.querySelector('article > .profile');
+  if (!bio || !profile) return;
+  const matchHeight = () => { profile.style.height = bio.offsetHeight + 'px'; };
+  matchHeight();
+  window.addEventListener('resize', matchHeight);
+});
+</script>
+
+<style>
+article > .profile {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+article > .profile figure {
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+}
+article > .profile figure picture,
+article > .profile figure img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 15%; /* bias crop toward the top so it doesn't cut into the head */
+}
+article > .profile .more-info {
+  flex-shrink: 0;
+}
+
+.home-cycler {
+  margin: 1rem 0 2.5rem;
+  height: 480px;
+  border-radius: 8px;
+  --swiper-navigation-size: 24px;
+}
+.cycler-empty {
+  margin: 1rem 0;
+  padding: 2rem;
+  text-align: center;
+  border: 1px dashed;
+  border-radius: 8px;
+  opacity: 0.6;
+}
+.home-cycler img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.home-cycler swiper-slide {
+  position: relative;
+}
+.cycler-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 0.95rem;
+}
+.cycler-link {
+  margin-top: -1.5rem;
+  text-align: right;
+}
+</style>
